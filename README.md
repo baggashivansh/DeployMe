@@ -15,8 +15,6 @@ DeployMe is a no-code portfolio builder that helps you create beautiful, profess
 
 https://deployme-shiv.netlify.app/
 
-)
-
 ---
 
 Made with ❤️ by Shivansh Bagga
