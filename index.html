@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeployMe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing" class="landing-section">
+        <div class="landing-content">
+            <h1 class="landing-title">Create Your Professional Portfolio</h1>
+            <p class="landing-subtitle">Build a stunning portfolio in minutes with our intuitive no-code approach</p>
+            <button class="btn btn--primary btn--lg" id="startBtn">Generate Portfolio</button>
+        </div>
+    </div>
+
+    <!-- Main Form -->
+    <div id="mainForm" class="form-section hidden">
+        <div class="container">
+            <div class="form-container">
+                <h2>Build Your Portfolio</h2>
+                
+                <form id="portfolioForm">
+                    <!-- Personal Information -->
+                    <div class="form-group">
+                        <h3>Personal Information</h3>
+                        <div class="input-grid">
+                            <div class="form-field">
+                                <label class="form-label" for="name">Name *</label>
+                                <input type="text" id="name" class="form-control" placeholder="e.g., Shivansh Bagga" required>
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label" for="email">Email *</label>
+                                <input type="email" id="email" class="form-control" placeholder="e.g., shivansh@gmailexample.com" required>
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label" for="title">Professional Title *</label>
+                                <input type="text" id="title" class="form-control" placeholder="e.g., Java Developer" required>
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label" for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="e.g., +91 000555-0123">
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label" for="linkedin">LinkedIn Profile</label>
+                                <input type="url" id="linkedin" class="form-control" placeholder="e.g., https://linkedin.com/in/shivanshbagga15">
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label" for="github">GitHub Profile</label>
+                                <input type="url" id="github" class="form-control" placeholder="e.g., https://github.com/baggashivansh">
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="about">About Me *</label>
+                            <textarea id="about" class="form-control" rows="4" placeholder="Write a compelling professional summary..." required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div class="form-group">
+                        <h3>Skills</h3>
+                        <div class="skills-input-container">
+                            <input type="text" id="skillInput" class="form-control" placeholder="e.g., Java, Spring, Python">
+                            <button type="button" class="btn btn--secondary" id="addSkillBtn">Add Skill</button>
+                        </div>
+                        <div id="skillsContainer" class="skills-container"></div>
+                    </div>
+
+                    <!-- Projects Section -->
+                    <div class="form-group">
+                        <div class="section-header">
+                            <h3>Projects</h3>
+                            <button type="button" class="btn btn--secondary" id="addProjectBtn">Add Project</button>
+                        </div>
+                        <div id="projectsContainer" class="dynamic-container"></div>
+                    </div>
+
+                    <!-- Experience Section -->
+                    <div class="form-group">
+                        <div class="section-header">
+                            <h3>Work Experience</h3>
+                            <button type="button" class="btn btn--secondary" id="addExperienceBtn">Add Experience</button>
+                        </div>
+                        <div id="experienceContainer" class="dynamic-container"></div>
+                    </div>
+
+                    <!-- Education Section -->
+                    <div class="form-group">
+                        <div class="section-header">
+                            <h3>Education</h3>
+                            <button type="button" class="btn btn--secondary" id="addEducationBtn">Add Education</button>
+                        </div>
+                        <div id="educationContainer" class="dynamic-container"></div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn--primary btn--lg btn--full-width" id="generateBtn">
+                            <span id="generateBtnText">Generate Portfolio</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Preview -->
+    <div id="previewSection" class="preview-section hidden">
+        <div class="container">
+            <div class="preview-header">
+                <h2>Your Portfolio Preview</h2>
+                <button class="btn btn--primary" id="downloadPdfBtn">Download PDF</button>
+            </div>
+            <div id="portfolioPreview" class="portfolio-preview"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with ❤️ by Shivansh Bagga</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
